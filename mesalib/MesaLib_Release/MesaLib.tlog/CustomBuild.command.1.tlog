@@ -1,0 +1,18 @@
+^D:\WORK\GRAPHICS\GLDIRECT5\MESA\SRC\MESA\X86\COMMON_X86_ASM.S
+cl D:\Work\Graphics\gldirect5\mesa\src\mesa\x86\common_x86_asm.S -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" > .\mesalib\MesaLib_Release\common_x86_asm.asm
+nasm .\mesalib\MesaLib_Release\common_x86_asm.asm -fwin32
+^D:\WORK\GRAPHICS\GLDIRECT5\MESA\SRC\MESA\X86\GLAPI_X86.S
+cl D:\Work\Graphics\gldirect5\mesa\src\mesa\x86\glapi_x86.S -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" > .\mesalib\MesaLib_Release\glapi_x86.asm
+nasm .\mesalib\MesaLib_Release\glapi_x86.asm -fwin32
+^D:\WORK\GRAPHICS\GLDIRECT5\MESA\SRC\MESA\X86\X86_CLIPTEST.S
+cl D:\Work\Graphics\gldirect5\mesa\src\mesa\x86\x86_cliptest.S -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" > .\mesalib\MesaLib_Release\x86_cliptest.asm
+nasm .\mesalib\MesaLib_Release\x86_cliptest.asm -fwin32
+^D:\WORK\GRAPHICS\GLDIRECT5\MESA\SRC\MESA\X86\X86_XFORM2.S
+cl D:\Work\Graphics\gldirect5\mesa\src\mesa\x86\x86_xform2.S -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" > .\mesalib\MesaLib_Release\x86_xform2.asm
+nasm .\mesalib\MesaLib_Release\x86_xform2.asm -fwin32
+^D:\WORK\GRAPHICS\GLDIRECT5\MESA\SRC\MESA\X86\X86_XFORM3.S
+cl D:\Work\Graphics\gldirect5\mesa\src\mesa\x86\x86_xform3.S -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" > .\mesalib\MesaLib_Release\x86_xform3.asm
+nasm .\mesalib\MesaLib_Release\x86_xform3.asm -fwin32
+^D:\WORK\GRAPHICS\GLDIRECT5\MESA\SRC\MESA\X86\X86_XFORM4.S
+cl D:\Work\Graphics\gldirect5\mesa\src\mesa\x86\x86_xform4.S -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" > .\mesalib\MesaLib_Release\x86_xform4.asm
+nasm .\mesalib\MesaLib_Release\x86_xform4.asm -fwin32

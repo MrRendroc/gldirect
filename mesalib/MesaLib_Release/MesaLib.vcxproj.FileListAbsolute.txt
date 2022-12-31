@@ -1,0 +1,1 @@
+D:\Work\Graphics\gldirect5\vs2005\mesalib\MesaLib_Release\MesaLib.lib

@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{B6293DC7-7988-4595-B42B-C1B82C8D0CB9}</ProjectGuid>
+    <RootNamespace>MesaLib</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.32819.101</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\mesalib\MesaLib_Debug\</OutDir>
+    <IntDir>.\mesalib\MesaLib_Debug\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\mesalib\MesaLib_Release\</OutDir>
+    <IntDir>.\mesalib\MesaLib_Release\</IntDir>
+    <ExecutablePath>C:\My Program Files\NASM;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/Zm280  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\mesa\include;..\mesa\src\mesa\glapi;..\mesa\src\mesa\main;..\mesa\src\mesa;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;DEBUG;_LIB;_CRT_SECURE_NO_WARNINGS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>.\mesalib\MesaLib_Debug/MesaLib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\mesalib\MesaLib_Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\mesalib\MesaLib_Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\mesalib\MesaLib_Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\mesalib\MesaLib_Debug\MesaLib.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\mesalib\MesaLib_Debug/MesaLib.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/Zm280  %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>..\mesa\include;..\mesa\src\mesa\glapi;..\mesa\src\mesa\main;..\mesa\src\mesa;..\nasm-0.99.06;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;USE_X86_ASM;_CRT_SECURE_NO_WARNINGS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>.\mesalib\MesaLib_Release/MesaLib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\mesalib\MesaLib_Release/</AssemblerListingLocation>
+      <ObjectFileName>.\mesalib\MesaLib_Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\mesalib\MesaLib_Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>.\mesalib\MesaLib_Release\MesaLib.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\mesalib\MesaLib_Release/MesaLib.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\mesa\src\mesa\glapi\glapi.c" />
+    <ClCompile Include="..\mesa\src\mesa\glapi\glthread.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\accum.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\api_arrayelt.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\api_loopback.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\api_noop.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\api_validate.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\arbfragparse.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\arbparse.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\arbprogram.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\arbvertparse.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\attrib.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\blend.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\bufferobj.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\buffers.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\clip.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\colortab.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\context.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\convolve.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\debug.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\depth.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\dispatch.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\dlist.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\drawpix.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\enable.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\enums.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\eval.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\extensions.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\feedback.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\fog.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\get.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\hash.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\hint.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\histogram.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\image.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\imports.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\light.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\lines.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\matrix.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\nvfragparse.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\nvprogram.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\nvvertexec.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\nvvertparse.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\occlude.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\pixel.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\points.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\polygon.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\program.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\rastpos.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\state.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\stencil.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\texcompress.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\texformat.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\teximage.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\texobj.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\texstate.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\texstore.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\texutil.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\varray.c" />
+    <ClCompile Include="..\mesa\src\mesa\main\vtxfmt.c" />
+    <ClCompile Include="..\mesa\src\mesa\math\m_debug_clip.c" />
+    <ClCompile Include="..\mesa\src\mesa\math\m_debug_norm.c" />
+    <ClCompile Include="..\mesa\src\mesa\math\m_debug_xform.c" />
+    <ClCompile Include="..\mesa\src\mesa\math\m_eval.c" />
+    <ClCompile Include="..\mesa\src\mesa\math\m_matrix.c" />
+    <ClCompile Include="..\mesa\src\mesa\math\m_translate.c" />
+    <ClCompile Include="..\mesa\src\mesa\math\m_vector.c" />
+    <ClCompile Include="..\mesa\src\mesa\math\m_xform.c" />
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_array_api.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_array_import.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_context.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_pipeline.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_save_api.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_save_loopback.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_save_playback.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vb_fog.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vb_light.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vb_normals.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vb_points.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vb_program.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vb_render.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vb_texgen.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vb_texmat.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vb_vertex.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vertex.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vtx_api.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vtx_eval.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vtx_exec.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\x86\common_x86.c" />
+    <ClCompile Include="..\mesa\src\mesa\x86\x86.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\mesa\src\mesa\x86\common_x86_asm.S">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
+nasm $(IntDir)%(Filename).asm -fwin32
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\x86\glapi_x86.S">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
+nasm $(IntDir)%(Filename).asm -fwin32
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\x86\x86_cliptest.S">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
+nasm $(IntDir)%(Filename).asm -fwin32
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\x86\x86_xform2.S">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
+nasm $(IntDir)%(Filename).asm -fwin32
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\x86\x86_xform3.S">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
+nasm $(IntDir)%(Filename).asm -fwin32
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\x86\x86_xform4.S">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "..\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
+nasm $(IntDir)%(Filename).asm -fwin32
+</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\tnl.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\t_array_api.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\t_array_import.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\t_context.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\t_pipeline.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\t_save_api.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\t_vb_cliptmp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\t_vb_lighttmp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\t_vb_rendertmp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\t_vertex.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\t_vtx_api.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

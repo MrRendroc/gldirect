@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="main">
+      <UniqueIdentifier>{8d71ef20-6e29-4267-9c60-5f3b7ab93cd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math">
+      <UniqueIdentifier>{a232ab69-8a4b-4ca5-8523-ee6c1c4426b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="glapi">
+      <UniqueIdentifier>{c553ce55-5537-41ec-a417-ade004a532fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="x86">
+      <UniqueIdentifier>{2010d688-a5eb-4c4b-bf9c-939bd8a799b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tnl">
+      <UniqueIdentifier>{679e1df7-3dc6-423d-8a09-84eb95c3f97f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\mesa\src\mesa\main\accum.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\api_arrayelt.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\api_loopback.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\api_noop.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\api_validate.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\arbfragparse.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\arbparse.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\arbprogram.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\arbvertparse.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\attrib.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\blend.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\bufferobj.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\buffers.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\clip.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\colortab.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\context.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\convolve.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\debug.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\depth.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\dispatch.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\dlist.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\drawpix.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\enable.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\enums.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\eval.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\extensions.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\feedback.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\fog.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\get.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\hash.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\hint.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\histogram.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\image.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\imports.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\light.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\lines.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\matrix.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\nvfragparse.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\nvprogram.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\nvvertexec.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\nvvertparse.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\occlude.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\pixel.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\points.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\polygon.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\program.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\rastpos.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\state.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\stencil.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\texcompress.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\texformat.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\teximage.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\texobj.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\texstate.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\texstore.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\texutil.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\varray.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\main\vtxfmt.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\math\m_debug_clip.c">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\math\m_debug_norm.c">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\math\m_debug_xform.c">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\math\m_eval.c">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\math\m_matrix.c">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\math\m_translate.c">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\math\m_vector.c">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\math\m_xform.c">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\glapi\glapi.c">
+      <Filter>glapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\glapi\glthread.c">
+      <Filter>glapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\x86\common_x86.c">
+      <Filter>x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\x86\x86.c">
+      <Filter>x86</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_array_api.c">
+      <Filter>tnl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_array_import.c">
+      <Filter>tnl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_context.c">
+      <Filter>tnl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_pipeline.c">
+      <Filter>tnl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_save_api.c">
+      <Filter>tnl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_save_loopback.c">
+      <Filter>tnl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_save_playback.c">
+      <Filter>tnl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vb_fog.c">
+      <Filter>tnl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vb_light.c">
+      <Filter>tnl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vb_normals.c">
+      <Filter>tnl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vb_points.c">
+      <Filter>tnl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vb_program.c">
+      <Filter>tnl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vb_render.c">
+      <Filter>tnl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vb_texgen.c">
+      <Filter>tnl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vb_texmat.c">
+      <Filter>tnl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vb_vertex.c">
+      <Filter>tnl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vertex.c">
+      <Filter>tnl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vtx_api.c">
+      <Filter>tnl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vtx_eval.c">
+      <Filter>tnl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mesa\src\mesa\tnl\t_vtx_exec.c">
+      <Filter>tnl</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\mesa\src\mesa\x86\common_x86_asm.S">
+      <Filter>x86</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\x86\glapi_x86.S">
+      <Filter>x86</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\x86\x86_cliptest.S">
+      <Filter>x86</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\x86\x86_xform2.S">
+      <Filter>x86</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\x86\x86_xform3.S">
+      <Filter>x86</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\x86\x86_xform4.S">
+      <Filter>x86</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\t_array_api.h">
+      <Filter>tnl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\t_array_import.h">
+      <Filter>tnl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\t_context.h">
+      <Filter>tnl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\t_pipeline.h">
+      <Filter>tnl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\t_save_api.h">
+      <Filter>tnl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\t_vb_cliptmp.h">
+      <Filter>tnl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\t_vb_lighttmp.h">
+      <Filter>tnl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\t_vb_rendertmp.h">
+      <Filter>tnl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\t_vertex.h">
+      <Filter>tnl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\t_vtx_api.h">
+      <Filter>tnl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\mesa\src\mesa\tnl\tnl.h">
+      <Filter>tnl</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
