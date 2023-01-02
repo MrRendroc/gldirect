@@ -836,6 +836,7 @@ void _gldOutputDebugShaderText(
 	}
 
 	// Fog
+
 	sprintf(szLine, "// Fog        : %s\n", (es->Fog.Enabled) ? g_pszEnabled : g_pszDisabled);
 	strcat(pOut, szLine);
 	if (es->Fog.Enabled) {
@@ -1523,8 +1524,9 @@ static int _gldFindEffect(
 
 	// Copy effect details
 	pGLDEffect->State = *pEffectState;
-#if 0
-    // SM 3.x is not working with DX 9.0b SDK; remove this when 9.0c SDK build works
+#if 1
+	// ENABLE THIS TO FIX MISSING FOG IN MOHAA
+	// SM 3.x is not working with DX 9.0b SDK; remove this when 9.0c SDK build works
     if (D3DSHADER_VERSION_MAJOR(gld->d3dCaps9.VertexShaderVersion) > 2 ||
         D3DSHADER_VERSION_MAJOR(gld->d3dCaps9.PixelShaderVersion) > 2)
         pszEffect = _gldBuildShaderText(pGLDEffect, D3DVS_VERSION(2,0), D3DPS_VERSION(2,0), gld->nEffects);
@@ -1549,7 +1551,7 @@ static int _gldFindEffect(
 	dwFlags = D3DXSHADER_PARTIALPRECISION;	// For nVidia parts
 #endif
 
-	//dwFlags |= D3DXSHADER_USE_LEGACY_D3DX9_31_DLL;
+	// dwFlags |= D3DXSHADER_USE_LEGACY_D3DX9_31_DLL;
 
 	hr = D3DXCreateEffect(
 			gld->pDev,				// device
