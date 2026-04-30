@@ -396,6 +396,8 @@ static Node *make_empty_list( void )
 {
    Node *n = (Node *) MALLOC( sizeof(Node) );
    n[0].opcode = OPCODE_END_OF_LIST;
+   /* All InstSize[] entries must be non-zero */
+   InstSize[OPCODE_END_OF_LIST] = 1;
    return n;
 }
 
@@ -1029,7 +1031,7 @@ void GLAPIENTRY _mesa_save_CallList( GLuint list )
    ctx->Driver.CurrentSavePrimitive = PRIM_UNKNOWN;
 
    if (ctx->ExecuteFlag) {
-      (*ctx->Exec->CallList)( list );
+      _mesa_CallList( list );
    }
 }
 
@@ -1073,7 +1075,7 @@ void GLAPIENTRY _mesa_save_CallLists( GLsizei n, GLenum type, const GLvoid *list
    ctx->Driver.CurrentSavePrimitive = PRIM_UNKNOWN;
 
    if (ctx->ExecuteFlag) {
-      (*ctx->Exec->CallLists)( n, type, lists );
+      _mesa_CallLists( n, type, lists );
    }
 }
 
