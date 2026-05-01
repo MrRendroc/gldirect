@@ -30,6 +30,7 @@
     <VCProjectVersion>17.0</VCProjectVersion>
     <ProjectGuid>{3B26FE1A-4046-4401-8B1B-57931B9C089A}</ProjectGuid>
     <RootNamespace>gld9</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -101,10 +102,11 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>.\dx9\Debug\</OutDir>
-    <IntDir>.\dx9\Debug\</IntDir>
+    <IntDir>$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
     <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+    <TargetName>opengl32</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -140,7 +142,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\src;..\mesa\include;..\mesa\src\mesa\main;..\mesa\src\mesa\glapi;..\mesa\src\mesa;..\mesa\src\mesa\x86;..\mesa\src\mesa\math;\scitech\private\include;\scitech\scitech\include;..\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\src;$(ProjectDir)\mesa\include;$(ProjectDir)\mesa\src\mesa\main;$(ProjectDir)\mesa\src\mesa\glapi;$(ProjectDir)\mesa\src\mesa;$(ProjectDir)\mesa\src\mesa\x86;$(ProjectDir)\mesa\src\mesa\math;\scitech\private\include;\scitech\scitech\include;$(ProjectDir)\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;DEBUG;BUILD_GL32;NO_LICENSE;_CRT_SECURE_NO_WARNINGS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -159,8 +161,8 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dxerr.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../bin/Debug/opengl32.dll</OutputFile>
+      <AdditionalDependencies>d3d9.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
@@ -185,7 +187,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\src;..\mesa\include;..\mesa\src\mesa\main;..\mesa\src\mesa\glapi;..\mesa\src\mesa;..\mesa\src\mesa\x86;..\mesa\src\mesa\math;\scitech\private\include;\scitech\scitech\include;..\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\src;$(ProjectDir)\mesa\include;$(ProjectDir)\mesa\src\mesa\main;$(ProjectDir)\mesa\src\mesa\glapi;$(ProjectDir)\mesa\src\mesa;$(ProjectDir)\mesa\src\mesa\x86;$(ProjectDir)\mesa\src\mesa\math;\scitech\private\include;\scitech\scitech\include;$(ProjectDir)\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;DEBUG;BUILD_GL32;NO_LICENSE;_CRT_SECURE_NO_WARNINGS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -204,7 +206,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>d3d9.lib;dxerr9.lib;d3dx9d.lib;glu32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../bin/Debug/opengl32.dll</OutputFile>
+      <OutputFile>$(ProjectDir)/bin/Debug/opengl32.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
@@ -229,7 +231,7 @@
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>\mssdk\include;..\mesa\src;..\mesa\include;..\src\utils;\scitech\private\include;\scitech\scitech\include;..;..\mesa\src\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>\mssdk\include;$(ProjectDir)\mesa\src;$(ProjectDir)\mesa\include;$(ProjectDir)\src\utils;\scitech\private\include;\scitech\scitech\include;$(ProjectDir);$(ProjectDir)\mesa\src\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;USE_X86_ASM;USE_3DNOW_ASM;USE_SSE_ASM;USE_MMX_ASM;WIN32_THREADS;GLD_THREADS;NO_LICENSE;BUILD_GL32;_USE_GLD3_WGL;_GLD3;GLD5_NULL_DRIVER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -247,7 +249,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr9.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../bin/NullDriver_Release/opengl32.dll</OutputFile>
+      <OutputFile>$(ProjectDir)/bin/NullDriver_Release/opengl32.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;.\mesalib\MesaLib_Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
@@ -271,7 +273,7 @@
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>\mssdk\include;..\mesa\src;..\mesa\include;..\src\utils;\scitech\private\include;\scitech\scitech\include;..;..\mesa\src\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>\mssdk\include;$(ProjectDir)\mesa\src;$(ProjectDir)\mesa\include;$(ProjectDir)\src\utils;\scitech\private\include;\scitech\scitech\include;$(ProjectDir);$(ProjectDir)\mesa\src\x86;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;USE_X86_ASM;USE_3DNOW_ASM;USE_SSE_ASM;USE_MMX_ASM;WIN32_THREADS;GLD_THREADS;NO_LICENSE;BUILD_GL32;_USE_GLD3_WGL;_GLD3;GLD5_NULL_DRIVER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -289,7 +291,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>mesalib.lib;dxguid.lib;d3dx9.lib;d3dx.lib;dxerr9.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../bin/NullDriver_Release/opengl32.dll</OutputFile>
+      <OutputFile>$(ProjectDir)/bin/NullDriver_Release/opengl32.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;\dx9\lib;.\mesalib\MesaLib_Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
@@ -314,7 +316,7 @@
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>..\src;..\mesa\include;..\mesa\src\mesa\main;..\mesa\src\mesa\glapi;..\mesa\src\mesa;..\mesa\src\mesa\x86;..\mesa\src\mesa\math;..\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\src;$(ProjectDir)\mesa\include;$(ProjectDir)\mesa\src\mesa\main;$(ProjectDir)\mesa\src\mesa\glapi;$(ProjectDir)\mesa\src\mesa;$(ProjectDir)\mesa\src\mesa\x86;$(ProjectDir)\mesa\src\mesa\math;$(ProjectDir)\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;NO_LICENSE;BUILD_GL32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -335,7 +337,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../bin/Release/opengl32.dll</OutputFile>
+      <OutputFile>$(ProjectDir)/bin/Release/opengl32.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
@@ -361,7 +363,7 @@
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>..\src;..\mesa\include;..\mesa\src\mesa\main;..\mesa\src\mesa\glapi;..\mesa\src\mesa;..\mesa\src\mesa\x86;..\mesa\src\mesa\math;..\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)\src;$(ProjectDir)\mesa\include;$(ProjectDir)\mesa\src\mesa\main;$(ProjectDir)\mesa\src\mesa\glapi;$(ProjectDir)\mesa\src\mesa;$(ProjectDir)\mesa\src\mesa\x86;$(ProjectDir)\mesa\src\mesa\math;$(ProjectDir)\snap_sdk_3.1-r23-src\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;NO_LICENSE;BUILD_GL32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -382,7 +384,7 @@
     </ResourceCompile>
     <Link>
       <AdditionalDependencies>d3dx9.lib;d3dx9.lib;dxerr9.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>../bin/Release/opengl32.dll</OutputFile>
+      <OutputFile>$(ProjectDir)/bin/Release/opengl32.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
@@ -394,70 +396,71 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\dll_main.c" />
-    <ClCompile Include="..\src\dx9\gld5_driver.c" />
-    <ClCompile Include="..\src\dx9\gld5_extensions.c" />
-    <ClCompile Include="..\src\dx9\gld5_texture.c" />
-    <ClCompile Include="..\src\dx9\gld5_wgl.c" />
-    <ClCompile Include="..\src\dx9\gld_dlist.c" />
-    <ClCompile Include="..\src\dx9\gld_shaders.c" />
-    <ClCompile Include="..\src\dx9\gld_tnl_dx9.c" />
-    <ClCompile Include="..\src\gld_arrayelt.c" />
-    <ClCompile Include="..\src\gld_context.c" />
-    <ClCompile Include="..\src\gld_driver.c" />
-    <ClCompile Include="..\src\gld_globals.c" />
-    <ClCompile Include="..\src\gld_log.c" />
-    <ClCompile Include="..\src\gld_pf.c" />
-    <ClCompile Include="..\src\gld_wgl.c" />
+    <ClCompile Include="$(ProjectDir)\src\dll_main.c" />
+    <ClCompile Include="$(ProjectDir)\src\dx9\gld5_driver.c" />
+    <ClCompile Include="$(ProjectDir)\src\dx9\gld5_extensions.c" />
+    <ClCompile Include="$(ProjectDir)\src\dx9\gld5_texture.c" />
+    <ClCompile Include="$(ProjectDir)\src\dx9\gld5_wgl.c" />
+    <ClCompile Include="$(ProjectDir)\src\dx9\gld_dlist.c" />
+    <ClCompile Include="$(ProjectDir)\src\dx9\gld_shaders.c" />
+    <ClCompile Include="$(ProjectDir)\src\dx9\gld_tnl_dx9.c" />
+    <ClCompile Include="$(ProjectDir)\src\gld_arrayelt.c" />
+    <ClCompile Include="$(ProjectDir)\src\gld_context.c" />
+    <ClCompile Include="$(ProjectDir)\src\gld_driver.c" />
+    <ClCompile Include="$(ProjectDir)\src\gld_globals.c" />
+    <ClCompile Include="$(ProjectDir)\src\gld_log.c" />
+    <ClCompile Include="$(ProjectDir)\src\gld_pf.c" />
+    <ClCompile Include="$(ProjectDir)\src\gld_wgl.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\mesa\include\GL\glext.h" />
-    <ClInclude Include="..\mesa\include\GL\internal\glcore.h" />
-    <ClInclude Include="..\mesa\include\GL\mesa_wgl.h" />
-    <ClInclude Include="..\mesa\src\mesa\glapi\glapi.h" />
-    <ClInclude Include="..\mesa\src\mesa\glapi\glapitable.h" />
-    <ClInclude Include="..\mesa\src\mesa\glapi\glthread.h" />
-    <ClInclude Include="..\mesa\src\mesa\main\api_arrayelt.h" />
-    <ClInclude Include="..\mesa\src\mesa\main\api_noop.h" />
-    <ClInclude Include="..\mesa\src\mesa\main\colormac.h" />
-    <ClInclude Include="..\mesa\src\mesa\main\config.h" />
-    <ClInclude Include="..\mesa\src\mesa\main\context.h" />
-    <ClInclude Include="..\mesa\src\mesa\main\dd.h" />
-    <ClInclude Include="..\mesa\src\mesa\main\depth.h" />
-    <ClInclude Include="..\mesa\src\mesa\main\dlist.h" />
-    <ClInclude Include="..\mesa\src\mesa\main\drawpix.h" />
-    <ClInclude Include="..\mesa\src\mesa\main\extensions.h" />
-    <ClInclude Include="..\mesa\src\mesa\main\get.h" />
-    <ClInclude Include="..\mesa\src\mesa\main\glheader.h" />
-    <ClInclude Include="..\mesa\src\mesa\main\image.h" />
-    <ClInclude Include="..\mesa\src\mesa\main\imports.h" />
-    <ClInclude Include="..\mesa\src\mesa\main\macros.h" />
-    <ClInclude Include="..\mesa\src\mesa\main\matrix.h" />
-    <ClInclude Include="..\mesa\src\mesa\main\mtypes.h" />
-    <ClInclude Include="..\mesa\src\mesa\main\state.h" />
-    <ClInclude Include="..\mesa\src\mesa\main\texformat.h" />
-    <ClInclude Include="..\mesa\src\mesa\main\teximage.h" />
-    <ClInclude Include="..\mesa\src\mesa\main\texstore.h" />
-    <ClInclude Include="..\mesa\src\mesa\main\vtxfmt.h" />
-    <ClInclude Include="..\mesa\src\mesa\math\m_matrix.h" />
-    <ClInclude Include="..\mesa\src\mesa\x86\common_x86_asm.h" />
-    <ClInclude Include="..\mesa\src\mesa\x86\common_x86_features.h" />
-    <ClInclude Include="..\src\dll_main.h" />
-    <ClInclude Include="..\src\dx9\gldirect5.h" />
-    <ClInclude Include="..\src\dx9\gld_dxerr9.h" />
-    <ClInclude Include="..\src\gld_api.h" />
-    <ClInclude Include="..\src\gld_arrayelt.h" />
-    <ClInclude Include="..\src\gld_context.h" />
-    <ClInclude Include="..\src\gld_driver.h" />
-    <ClInclude Include="..\src\gld_globals.h" />
-    <ClInclude Include="..\src\gld_log.h" />
-    <ClInclude Include="..\src\gld_macros.h" />
-    <ClInclude Include="..\src\gld_pf.h" />
-    <ClInclude Include="..\src\gld_wgl.h" />
-    <ClInclude Include="..\src\glu.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\include\GL\glext.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\include\GL\internal\glcore.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\include\GL\mesa_wgl.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\glapi\glapi.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\glapi\glapitable.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\glapi\glthread.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\api_arrayelt.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\api_noop.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\colormac.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\config.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\context.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\dd.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\depth.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\dlist.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\drawpix.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\extensions.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\get.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\glheader.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\image.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\imports.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\macros.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\matrix.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\mtypes.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\state.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\texformat.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\teximage.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\texstore.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\vtxfmt.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\math\m_matrix.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\x86\common_x86_asm.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\x86\common_x86_features.h" />
+    <ClInclude Include="$(ProjectDir)\src\dll_main.h" />
+    <ClInclude Include="$(ProjectDir)\src\dx9\gldirect5.h" />
+    <ClInclude Include="$(ProjectDir)\src\dx9\gld_dxerr9.h" />
+    <ClInclude Include="$(ProjectDir)\src\gld_api.h" />
+    <ClInclude Include="$(ProjectDir)\src\gld_arrayelt.h" />
+    <ClInclude Include="$(ProjectDir)\src\gld_context.h" />
+    <ClInclude Include="$(ProjectDir)\src\gld_driver.h" />
+    <ClInclude Include="$(ProjectDir)\src\gld_globals.h" />
+    <ClInclude Include="$(ProjectDir)\src\gld_log.h" />
+    <ClInclude Include="$(ProjectDir)\src\gld_macros.h" />
+    <ClInclude Include="$(ProjectDir)\src\gld_pf.h" />
+    <ClInclude Include="$(ProjectDir)\src\gld_wgl.h" />
+    <ClInclude Include="$(ProjectDir)\src\glu.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="opengl32.def" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="MesaLib.vcxproj">
@@ -467,5 +470,12 @@
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\Microsoft.DXSDK.D3DX.9.29.952.8\build\native\Microsoft.DXSDK.D3DX.targets" Condition="Exists('packages\Microsoft.DXSDK.D3DX.9.29.952.8\build\native\Microsoft.DXSDK.D3DX.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.DXSDK.D3DX.9.29.952.8\build\native\Microsoft.DXSDK.D3DX.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.DXSDK.D3DX.9.29.952.8\build\native\Microsoft.DXSDK.D3DX.targets'))" />
+  </Target>
 </Project>

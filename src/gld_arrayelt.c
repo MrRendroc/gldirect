@@ -30,6 +30,11 @@
 // Added STDCALL_API in order to use Kendall's asm dispatch. KeithH.
 //
 
+#ifdef _WIN32
+#define WIN32_LEAN_AND_MEAN
+#include <windows.h>
+#endif
+
 #include "glheader.h"
 #include "gld_arrayelt.h"
 #include "context.h"
