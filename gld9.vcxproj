@@ -336,8 +336,8 @@
       <AdditionalIncludeDirectories>\private\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>legacy_stdio_definitions.lib;d3dx9.lib;dxerr.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(ProjectDir)/bin/Release/opengl32.dll</OutputFile>
+      <AdditionalDependencies>legacy_stdio_definitions.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)opengl32.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>\mssdk\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>.\opengl32.def</ModuleDefinitionFile>
@@ -459,6 +459,9 @@
     <ClInclude Include="$(ProjectDir)\src\glu.h" />
   </ItemGroup>
   <ItemGroup>
+    <CopyFileToFolders Include="gldirect.ini">
+      <FileType>Document</FileType>
+    </CopyFileToFolders>
     <None Include="opengl32.def" />
     <None Include="packages.config" />
   </ItemGroup>

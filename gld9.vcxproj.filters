@@ -90,4 +90,7 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="gldirect.ini" />
+  </ItemGroup>
 </Project>

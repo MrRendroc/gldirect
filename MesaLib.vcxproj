@@ -90,7 +90,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <AdditionalIncludeDirectories>$(ProjectDir)\mesa\include;$(ProjectDir)\mesa\src\mesa\glapi;$(ProjectDir)\mesa\src\mesa\main;$(ProjectDir)\mesa\src\mesa;$(ProjectDir)\nasm-0.99.06;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;USE_X86_ASM;_CRT_SECURE_NO_WARNINGS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_WIN32;MESA_MINWARN;__WIN32__;__MSC__;_CRT_SECURE_NO_WARNINGS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -278,36 +278,48 @@
 nasm $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
     <CustomBuild Include="$(ProjectDir)\mesa\src\mesa\x86\glapi_x86.S">
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "$(ProjectDir)\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
 nasm $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
     <CustomBuild Include="$(ProjectDir)\mesa\src\mesa\x86\x86_cliptest.S">
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "$(ProjectDir)\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
 nasm $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
     <CustomBuild Include="$(ProjectDir)\mesa\src\mesa\x86\x86_xform2.S">
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "$(ProjectDir)\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
 nasm $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
     <CustomBuild Include="$(ProjectDir)\mesa\src\mesa\x86\x86_xform3.S">
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "$(ProjectDir)\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
 nasm $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
     <CustomBuild Include="$(ProjectDir)\mesa\src\mesa\x86\x86_xform4.S">
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl %(FullPath) -nologo -DSTDCALL_API -DNASM_ASSEMBLER /EP /I "$(ProjectDir)\mesa\src\mesa\glapi" &gt; $(IntDir)%(Filename).asm
 nasm $(IntDir)%(Filename).asm -fwin32
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename).asm;$(IntDir)%(Filename).obj;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
