@@ -22,189 +22,75 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\dx9\gld5_driver.c">
-      <Filter>driver</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\dx9\gld5_extensions.c">
-      <Filter>driver</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\dx9\gld5_texture.c">
-      <Filter>driver</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\dx9\gld5_wgl.c">
-      <Filter>driver</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\dx9\gld_dlist.c">
-      <Filter>driver</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\dx9\gld_shaders.c">
-      <Filter>driver</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\dx9\gld_tnl_dx9.c">
-      <Filter>driver</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\dll_main.c">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\gld_context.c">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\gld_driver.c">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\gld_globals.c">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\gld_log.c">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\gld_pf.c">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\gld_wgl.c">
-      <Filter>core</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\gld_arrayelt.c">
-      <Filter>array element</Filter>
-    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\src\dll_main.c" />
+    <ClCompile Include="$(ProjectDir)\src\dx9\gld5_driver.c" />
+    <ClCompile Include="$(ProjectDir)\src\dx9\gld5_extensions.c" />
+    <ClCompile Include="$(ProjectDir)\src\dx9\gld5_texture.c" />
+    <ClCompile Include="$(ProjectDir)\src\dx9\gld5_wgl.c" />
+    <ClCompile Include="$(ProjectDir)\src\dx9\gld_dlist.c" />
+    <ClCompile Include="$(ProjectDir)\src\dx9\gld_shaders.c" />
+    <ClCompile Include="$(ProjectDir)\src\dx9\gld_tnl_dx9.c" />
+    <ClCompile Include="$(ProjectDir)\src\gld_arrayelt.c" />
+    <ClCompile Include="$(ProjectDir)\src\gld_context.c" />
+    <ClCompile Include="$(ProjectDir)\src\gld_driver.c" />
+    <ClCompile Include="$(ProjectDir)\src\gld_globals.c" />
+    <ClCompile Include="$(ProjectDir)\src\gld_log.c" />
+    <ClCompile Include="$(ProjectDir)\src\gld_pf.c" />
+    <ClCompile Include="$(ProjectDir)\src\gld_wgl.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\dx9\gld_dxerr9.h">
-      <Filter>driver</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\dx9\gldirect5.h">
-      <Filter>driver</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\dll_main.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\gld_api.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\gld_context.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\gld_driver.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\gld_globals.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\gld_log.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\gld_macros.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\gld_pf.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\gld_wgl.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\glu.h">
-      <Filter>core</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\gld_arrayelt.h">
-      <Filter>array element</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\main\api_arrayelt.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\main\api_noop.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\main\colormac.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\x86\common_x86_asm.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\x86\common_x86_features.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\main\config.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\main\context.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\main\dd.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\main\depth.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\main\dlist.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\main\drawpix.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\main\extensions.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\main\get.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\glapi\glapi.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\glapi\glapitable.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\include\GL\internal\glcore.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\include\GL\glext.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\main\glheader.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\glapi\glthread.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\main\image.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\main\imports.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\math\m_matrix.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\main\macros.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\main\matrix.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\include\GL\mesa_wgl.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\main\mtypes.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\main\state.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\main\texformat.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\main\teximage.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\main\texstore.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
-    <ClInclude Include="..\mesa\src\mesa\main\vtxfmt.h">
-      <Filter>mesa headers</Filter>
-    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\mesa\include\GL\glext.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\include\GL\internal\glcore.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\include\GL\mesa_wgl.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\glapi\glapi.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\glapi\glapitable.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\glapi\glthread.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\api_arrayelt.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\api_noop.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\colormac.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\config.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\context.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\dd.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\depth.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\dlist.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\drawpix.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\extensions.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\get.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\glheader.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\image.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\imports.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\macros.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\matrix.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\mtypes.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\state.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\texformat.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\teximage.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\texstore.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\main\vtxfmt.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\math\m_matrix.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\x86\common_x86_asm.h" />
+    <ClInclude Include="$(ProjectDir)\mesa\src\mesa\x86\common_x86_features.h" />
+    <ClInclude Include="$(ProjectDir)\src\dll_main.h" />
+    <ClInclude Include="$(ProjectDir)\src\dx9\gldirect5.h" />
+    <ClInclude Include="$(ProjectDir)\src\dx9\gld_dxerr9.h" />
+    <ClInclude Include="$(ProjectDir)\src\gld_api.h" />
+    <ClInclude Include="$(ProjectDir)\src\gld_arrayelt.h" />
+    <ClInclude Include="$(ProjectDir)\src\gld_context.h" />
+    <ClInclude Include="$(ProjectDir)\src\gld_driver.h" />
+    <ClInclude Include="$(ProjectDir)\src\gld_globals.h" />
+    <ClInclude Include="$(ProjectDir)\src\gld_log.h" />
+    <ClInclude Include="$(ProjectDir)\src\gld_macros.h" />
+    <ClInclude Include="$(ProjectDir)\src\gld_pf.h" />
+    <ClInclude Include="$(ProjectDir)\src\gld_wgl.h" />
+    <ClInclude Include="$(ProjectDir)\src\glu.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="opengl32.def">
       <Filter>def</Filter>
     </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="gldirect.ini" />
   </ItemGroup>
 </Project>

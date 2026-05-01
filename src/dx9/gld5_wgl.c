@@ -151,7 +151,7 @@ BOOL gldGetDXErrorString_DX(
 	// Return a string describing the input HRESULT error code
 	//
 
-	const char *pStr = DXGetErrorString(hr);
+	const char* pStr = "DirectX Error";
 
 	if (pStr == NULL)
 		return FALSE;
